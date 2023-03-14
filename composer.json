@@ -1,5 +1,5 @@
 {
-    "name": "norgul/xmpp-php",
+    "name": "matthewknill/xmpp-php",
     "description": "PHP library for XMPP.",
     "keywords": [
         "php",
@@ -26,7 +26,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Norgul\\Xmpp\\": "src/"
+            "Matthewknill\\Xmpp\\": "src/"
         }
     }
 }
