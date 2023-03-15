@@ -48,6 +48,11 @@ class Options
      * @var Authenticable $authType
      */
     protected $authType;
+    /**
+     * Period in microseconds for imposed timeout while doing socket_read()
+     * @var integer $timeout
+     */
+    protected $socketTimeout = 150000;
 
     public function getHost()
     {
@@ -214,5 +219,15 @@ class Options
     {
         $this->authType = $authType;
         return $this;
+    }
+
+    public function getSocketTimeout()
+    {
+        return $this->socketTimeout;
+    }
+
+    public function setSocketTimeout($timeout)
+    {
+        $this->socketTimeout = $timeout;
     }
 }

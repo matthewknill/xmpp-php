@@ -14,11 +14,6 @@ class Socket
     protected $options;
 
     /**
-     * Period in microseconds for imposed timeout while doing socket_read()
-     */
-    protected $timeout = 20000;
-
-    /**
      * Socket constructor.
      * @param Options $options
      * @throws DeadSocket
@@ -33,7 +28,7 @@ class Socket
         }
 
         //stream_set_blocking($this->connection, true);
-        stream_set_timeout($this->connection, 0, $this->timeout);
+        stream_set_timeout($this->connection, 0, $options->getSocketTimeout());
         $this->options = $options;
     }
 
