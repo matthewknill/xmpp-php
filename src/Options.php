@@ -50,7 +50,7 @@ class Options
     protected $authType;
     /**
      * Period in microseconds for imposed timeout while doing socket_read()
-     * @var integer $timeout
+     * @var integer $socketTimeout
      */
     protected $socketTimeout = 150000;
 
