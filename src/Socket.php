@@ -46,7 +46,7 @@ class Socket
         try {
             fwrite($this->connection, $xml);
             $this->options->getLogger()->logRequest(__METHOD__ . '::' . __LINE__ . " $xml");
-            //$this->checkSocketStatus();
+            $this->checkSocketStatus();
         } catch (Exception $e) {
             $this->options->getLogger()->error(__METHOD__ . '::' . __LINE__ . " fwrite() failed " . $e->getMessage());
             return;

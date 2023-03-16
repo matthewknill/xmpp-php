@@ -17,7 +17,7 @@ class XmppClient
      * @var $socket Socket
      */
     protected $socket;
-    protected $options;
+    public $options;
 
     /**
      * @var $auth Auth
