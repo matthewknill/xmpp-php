@@ -97,7 +97,7 @@ class Socket
         //echo print_r($status);
 
         if ($status['eof']) {
-            $this->options->getLogger()->logResponse(
+            $this->options->getLogger()->error(
                 __METHOD__ . '::' . __LINE__ .
                 " ---Probably a broken pipe, restart connection\n"
             );
